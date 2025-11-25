@@ -5,13 +5,25 @@ public class Dropper : MonoBehaviour
 {
     [SerializeField] float dropDelay = 3f;
 
-    void Update()
+    MeshRenderer meshRenderer;
+    Rigidbody rigidBody;
+
+    private void Start()
     {
-        if(Time.time > dropDelay)
+        meshRenderer = GetComponent<MeshRenderer>();
+        rigidBody = GetComponent<Rigidbody>();
+
+        meshRenderer.enabled = false;
+        rigidBody.useGravity = false;
+    }
+
+    private void Update()
+    {
+        if (Time.time > dropDelay)
         {
             Debug.Log("Dropper activated, enabling gravity.");
-            GetComponent<Rigidbody>().useGravity = true;
-
+            rigidBody.useGravity = true;
+            meshRenderer.enabled = true;
         }
     }
 }

@@ -3,12 +3,22 @@ using UnityEngine;
 
 public class Lives : MonoBehaviour
 {
-    int remainingLives = 5;
+    int remainingLives;
+
+    void Start()
+    {
+        Dodger dodger = FindObjectOfType<Dodger>();
+        remainingLives = dodger.maxLives;
+    }
 
     void LoseLife() 
     {
-        remainingLives--;
-        Debug.Log("Lives remaining: " + remainingLives);
+        GameObject gameObject = ObjectHit.collision.gameObject;
+        if (gameObject.tag != "Hit" && gameObject.name.Contains("Obstacle"))
+        {
+            remainingLives--;
+            Debug.Log("Remaining lives: " + remainingLives);
+        }
         GameOver();
     }
 

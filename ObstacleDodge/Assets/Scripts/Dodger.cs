@@ -1,9 +1,10 @@
-using System.Threading;
 using UnityEngine;
 
-public class Mover : MonoBehaviour
+public class Dodger: MonoBehaviour
 {
+    [SerializeField] public int maxLives = 3;
     [SerializeField] float moveSpeed = 0.01f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
