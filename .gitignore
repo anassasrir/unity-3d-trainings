@@ -4,3 +4,6 @@
 */[Oo]bj/
 */[Bb]uild/
 */[Uu]ser[Ss]ettings/
+
+*/.vsconfig
+*/.vs/
