@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Lives : MonoBehaviour
@@ -15,7 +16,7 @@ public class Lives : MonoBehaviour
     {
         if (remainingLives <= 0)
         {
-            Debug.Log("Game Over!");
+            Debug.Log($"Game Over! You played for {Convert.ToInt32(Time.time)}s");
         }
     }
 
