@@ -18,9 +18,6 @@ public class FlyAtPlayer : MonoBehaviour
 
     void MoveToPlayerPosition()
     {
-        Debug.Log("player position: " + transform.position);
-
-        Debug.Log("player position: " + targetPosition);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * projectileSpeed);
     }
 
