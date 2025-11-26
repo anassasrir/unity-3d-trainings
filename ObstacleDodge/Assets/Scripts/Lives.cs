@@ -7,7 +7,7 @@ public class Lives : MonoBehaviour
 
     void Start()
     {
-        Dodger dodger = FindObjectOfType<Dodger>();
+        Dodger dodger = FindFirstObjectByType<Dodger>();
         remainingLives = dodger.maxLives;
     }
 
