@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FlyAtPlayer : MonoBehaviour
@@ -5,6 +6,7 @@ public class FlyAtPlayer : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float projectileSpeed = 0.05f; 
     Vector3 targetPosition;
+
 
     private void DestroyWhenReached()
     {
@@ -16,8 +18,10 @@ public class FlyAtPlayer : MonoBehaviour
 
     void MoveToPlayerPosition()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * projectileSpeed);
+        Debug.Log("player position: " + transform.position);
 
+        Debug.Log("player position: " + targetPosition);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * projectileSpeed);
     }
 
     void Start()
@@ -26,7 +30,6 @@ public class FlyAtPlayer : MonoBehaviour
     }
     void Update()
     {
-        
         MoveToPlayerPosition();
         DestroyWhenReached();
     }

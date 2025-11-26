@@ -21,7 +21,7 @@ public class Dropper : MonoBehaviour
     {
         if (Time.time > dropDelay)
         {
-            Debug.Log("Dropper activated, enabling gravity.");
+            //Debug.Log("Dropper activated, enabling gravity.");
             rigidBody.useGravity = true;
             meshRenderer.enabled = true;
         }
