@@ -51,6 +51,7 @@
     <Compile Include="Assets\Scripts\Lives.cs" />
     <Compile Include="Assets\Scripts\Spinner.cs" />
     <Compile Include="Assets\Scripts\Dropper.cs" />
+    <Compile Include="Assets\Scripts\FlyAtPlayer.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Dodger.cs" />
     <Compile Include="Assets\Scripts\ObjectHit.cs" />

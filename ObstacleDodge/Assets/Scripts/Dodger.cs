@@ -2,14 +2,17 @@ using UnityEngine;
 
 public class Dodger: MonoBehaviour
 {
+    [SerializeField] Vector3 startingPosition = new Vector3(0, 0.5f, -40);
     [SerializeField] public int maxLives = 3;
     [SerializeField] float moveSpeed = 0.01f;
+    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         PrintInstructions();
+        transform.position = startingPosition;
     }
 
     // Update is called once per frame
