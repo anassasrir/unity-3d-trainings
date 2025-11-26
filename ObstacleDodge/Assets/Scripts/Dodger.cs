@@ -12,7 +12,6 @@ public class Dodger: MonoBehaviour
     void Start()
     {
         PrintInstructions();
-        //transform.position = startingPosition;
     }
 
     // Update is called once per frame
